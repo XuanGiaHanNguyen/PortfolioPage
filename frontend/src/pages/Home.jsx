@@ -3,124 +3,80 @@ import { ModeToggle } from "../components/ModeToggle"
 import { Button } from "../components/ui/Button"
 import { Badge } from "../components/ui/Badge"
 import { Card, CardContent } from "../components/ui/Card"
+import { useTheme } from "../components/ThemeProvider"
 import { Github, Linkedin, Mail, ExternalLink, Code, BookOpen, Award, User, Menu } from "lucide-react"
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  
+  const { theme, setTheme } = useTheme()
+  console.log("Current theme in Home:", theme)
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950">
       {/* Navigation */}
-      <header className="sticky top-0 z-40 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:bg-gray-950/95 dark:border-gray-800">
+      <header className="sticky top-0 z-40 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/95 dark:bg-gray-950/95 dark:border-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
-          <div className="font-semibold text-gray-900 dark:text-white">Tuan Khang Phan</div>
+          <div className="font-semibold text-gray-900 dark:text-white">Han Nguyen</div>
           <nav className="hidden md:flex items-center gap-6">
             <a
               href="#home"
-              className="text-sm font-medium text-blue-600 dark:text-blue-400 transition-colors hover:text-blue-500 dark:hover:text-blue-300"
+              className="text-sm font-medium text-gray-700 dark:text-blue-400 transition-colors hover:text-blue-800 dark:hover:text-blue-300"
             >
               Home
             </a>
             <a
               href="#about"
-              className="text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors hover:text-blue-600 dark:hover:text-blue-400"
+              className="text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors hover:text-blue-800 dark:hover:text-blue-400"
             >
               About
             </a>
             <a
               href="#skills"
-              className="text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors hover:text-blue-600 dark:hover:text-blue-400"
+              className="text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors hover:text-blue-800 dark:hover:text-blue-400"
             >
               Skills
             </a>
             <a
               href="#education"
-              className="text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors hover:text-blue-600 dark:hover:text-blue-400"
+              className="text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors hover:text-blue-800 dark:hover:text-blue-400"
             >
               Education
             </a>
             <a
               href="#projects"
-              className="text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors hover:text-blue-600 dark:hover:text-blue-400"
+              className="text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors hover:text-blue-800 dark:hover:text-blue-400"
             >
               Projects
             </a>
             <a
               href="#contact"
-              className="text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors hover:text-blue-600 dark:hover:text-blue-400"
+              className="text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors hover:text-blue-800 dark:hover:text-blue-400"
             >
               Contact
             </a>
           </nav>
           <div className="flex items-center gap-2">
             <ModeToggle />
-            <Button
-              variant="outline"
-              size="icon"
-              className="rounded-full md:hidden"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              <span className="sr-only">Toggle menu</span>
-              <Menu className="h-5 w-5" />
-            </Button>
           </div>
         </div>
-
-        {/* Mobile menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 py-2">
-            <div className="container mx-auto px-4 space-y-1">
-              <a
-                href="#home"
-                className="block px-3 py-2 rounded-md text-base font-medium text-blue-600 dark:text-blue-400"
-              >
-                Home
-              </a>
-              <a
-                href="#about"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-900"
-              >
-                About
-              </a>
-              <a
-                href="#skills"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-900"
-              >
-                Skills
-              </a>
-              <a
-                href="#education"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-900"
-              >
-                Education
-              </a>
-              <a
-                href="#projects"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-900"
-              >
-                Projects
-              </a>
-              <a
-                href="#contact"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-900"
-              >
-                Contact
-              </a>
-            </div>
-          </div>
-        )}
       </header>
 
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Hero Section */}
         <section id="home" className="py-12 md:py-20">
-          <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
+          <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center px-6">
             <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-gray-100 dark:bg-gray-800 px-3 py-1 text-sm">
-                Computer Science Student
+              <div className="flex flex-row gap-2">
+                <div className="inline-block rounded-lg bg-gray-100 dark:bg-gray-800 px-3 py-1 text-sm">
+                Computer Science
+                </div>
+                <div className="inline-block rounded-lg bg-gray-100 dark:bg-gray-800 px-3 py-1 text-sm">
+                Full-Stack Developer
+                </div>
               </div>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-gray-900 dark:text-white">
-                Hi, I'm <span className="text-blue-600 dark:text-blue-400">Khang Phan</span>
+                My name is <span className="text-blue-900 dark:text-blue-400">Han Nguyen</span>
               </h1>
               <p className="text-xl text-gray-500 dark:text-gray-400">
                 Passionate about coding, hackathons, and programming with robots.
