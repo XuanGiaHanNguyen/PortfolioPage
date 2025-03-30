@@ -48,7 +48,7 @@ export default function Home() {
             </a>
             <a
               href="#certification"
-              className="text-sm font-medium text-gray-700 dark:text-blue-400 transition-colors hover:text-blue-800 dark:hover:text-blue-300"
+              className="text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors hover:text-blue-800 dark:hover:text-blue-300"
             >
               Certifications
             </a>
@@ -83,10 +83,10 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center px-6">
             <div className="space-y-4">
               <div className="flex flex-row gap-2">
-                <div className="inline-block rounded-lg bg-gray-100 dark:bg-gray-800 px-3 py-1 text-sm">
+                <div className="inline-block rounded-lg bg-gray-100 dark:bg-gray-800 dark:text-gray-300 px-3 py-1 text-sm">
                 Computer Science
                 </div>
-                <div className="inline-block rounded-lg bg-gray-100 dark:bg-gray-800 px-3 py-1 text-sm">
+                <div className="inline-block rounded-lg bg-gray-100 dark:bg-gray-800 dark:text-gray-300 px-3 py-1 text-sm">
                 Full-Stack Developer
                 </div>
               </div>
@@ -132,7 +132,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex justify-center hidden md:flex">
-              <div className="relative aspect-square w-[300px] h-[300px] md:w-[390px] md:h-[390px] rounded-full bg-blue-50 p-1">
+              <div className="relative aspect-square w-[300px] h-[300px] md:w-[390px] md:h-[390px] rounded-full bg-blue-50 dark:bg-gray-700 p-1">
                 <div className="absolute inset-0 rounded-full overflow-hidden">
                   <img src={Whale}/>
                 </div>    
