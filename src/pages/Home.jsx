@@ -10,8 +10,9 @@ import Dash from "../assets/Dash.png"
 import Toast from "../assets/Toast.png"
 import MERN from "../assets/MERN.png"
 import ML from "../assets/ML.png"
+import Pytorch from "../assets/PyTorch.png"
 import Whale from "../assets/whale.png"
-import Wave from "../assets/wave.png"
+
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -25,13 +26,8 @@ export default function Home() {
       <header className="sticky top-0 z-40 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/95 dark:bg-gray-950/95 dark:border-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
           <div className="font-semibold text-gray-900 dark:text-white">Han Nguyen</div>
-          <nav className="hidden md:flex items-center gap-6">
-            <a
-              href="#home"
-              className="text-sm font-medium text-gray-700 dark:text-blue-400 transition-colors hover:text-blue-800 dark:hover:text-blue-300"
-            >
-              Home
-            </a>
+          <nav className="hidden md:flex items-center gap-8">
+            
             <a
               href="#about"
               className="text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors hover:text-blue-800 dark:hover:text-blue-400"
@@ -43,6 +39,12 @@ export default function Home() {
               className="text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors hover:text-blue-800 dark:hover:text-blue-400"
             >
               Skills
+            </a>
+            <a
+              href="#certification"
+              className="text-sm font-medium text-gray-700 dark:text-blue-400 transition-colors hover:text-blue-800 dark:hover:text-blue-300"
+            >
+              Certifications
             </a>
             <a
               href="#education"
@@ -257,7 +259,7 @@ export default function Home() {
               <Award className="h-5 w-5 text-blue-800 dark:text-blue-400" />
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Certifications</h2>
             </div>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-3 gap-6">
               {/* Project 1 */}
               <Card className="overflow-hidden">
                 <div className="aspect-video bg-gray-100 dark:bg-gray-800 relative">
@@ -293,11 +295,30 @@ export default function Home() {
                     <Badge variant="achievement">MongoDB</Badge>
                   </div>
                   <p className="text-gray-500 dark:text-gray-400 mt-2">
-                    Introductionary course to Full-stack development and the fundamentals of NodeJS, ExpressJS, ReactJS and MongoDB.
-                  </p>
+                    Introductionary course to Full-stack development.
+                  </p> 
                 </CardContent>
               </Card>
 
+              {/* Project 3 */}
+              <Card className="overflow-hidden">
+                <div className="aspect-video bg-gray-100 dark:bg-gray-800 relative">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                   <img src={Pytorch} alt="" className="object-cover w-full h-full"/>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl mt-4 font-semibold text-gray-900 dark:text-white">PyTorch Essential Training: Deep
+                  Learning</h3>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    <Badge variant="achievement">PyTorch</Badge>
+                    <Badge variant="achievement">Deep Learning</Badge>
+                  </div>
+                  <p className="text-gray-500 dark:text-gray-400 mt-2">
+                    Fundamentals of PyTorch and Deep Learning.
+                  </p>
+                </CardContent>
+              </Card>
               
             </div>
           </div>
