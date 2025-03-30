@@ -4,7 +4,7 @@ import { Button } from "../components/ui/Button"
 import { Badge } from "../components/ui/Badge"
 import { Card, CardContent } from "../components/ui/Card"
 import { useTheme } from "../components/ThemeProvider"
-import { Github,  Linkedin, Mail, ExternalLink, Code, BookOpen, Award, User, Menu } from "lucide-react"
+import { Github,  Linkedin, Mail, ExternalLink, Code, BookOpen, Award, User, Menu, Briefcase } from "lucide-react"
 
 import Dash from "../assets/Dash.png"
 import Toast from "../assets/Toast.png"
@@ -35,6 +35,12 @@ export default function Home() {
               About
             </a>
             <a
+              href="#education"
+              className="text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors hover:text-blue-800 dark:hover:text-blue-400"
+            >
+              Education
+            </a>
+            <a
               href="#skills"
               className="text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors hover:text-blue-800 dark:hover:text-blue-400"
             >
@@ -47,10 +53,10 @@ export default function Home() {
               Certifications
             </a>
             <a
-              href="#education"
+              href="#Experience"
               className="text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors hover:text-blue-800 dark:hover:text-blue-400"
             >
-              Education
+              Experience
             </a>
             <a
               href="#projects"
@@ -91,32 +97,42 @@ export default function Home() {
                 Passionate about Full-stack Development, Machine Learning and Whales.
               </p>
               <div className="flex gap-4">
+              <a href="https://github.com/XuanGiaHanNguyen" target="_blank" rel="noopener noreferrer">
                 <Button>
                   View Projects
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </Button>
+              </a>
+              <a href="#contact">
                 <Button variant="outline">
                   Contact Me
                   <Mail className="ml-2 h-4 w-4" />
                 </Button>
+              </a>
               </div>
               <div className="flex gap-4 pt-1">
-                <Button variant="ghost" size="icon" className="rounded-full">
-                  <Github className="h-5 w-5" />
-                  <span className="sr-only">GitHub</span>
-                </Button>
-                <Button variant="ghost" size="icon" className="rounded-full">
-                  <Linkedin className="h-5 w-5" />
-                  <span className="sr-only">LinkedIn</span>
-                </Button>
-                <Button variant="ghost" size="icon" className="rounded-full">
-                  <Mail className="h-5 w-5" />
-                  <span className="sr-only">Email</span>
-                </Button>
+              <a href="https://github.com/XuanGiaHanNguyen" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="icon" className="rounded-full">
+                <Github className="h-4 w-4" />
+                <span className="sr-only">GitHub</span>
+              </Button>
+            </a>
+            <a href="https://www.linkedin.com/in/xuangiahannguyen/" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="icon" className="rounded-full">
+                <Linkedin className="h-4 w-4" />
+                <span className="sr-only">LinkedIn</span>
+              </Button>
+            </a>
+            <a href="mailto:xuangiahannguyen@gmail.com" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="icon" className="rounded-full">
+                <Mail className="h-4 w-4" />
+                <span className="sr-only">Email</span>
+              </Button>
+            </a>
               </div>
             </div>
-            <div className="flex justify-center">
-              <div className="relative w-[300px] h-[300px] md:w-[390px] md:h-[390px] rounded-full bg-blue-50 p-1">
+            <div className="flex justify-center hidden md:flex">
+              <div className="relative aspect-square w-[300px] h-[300px] md:w-[390px] md:h-[390px] rounded-full bg-blue-50 p-1">
                 <div className="absolute inset-0 rounded-full overflow-hidden">
                   <img src={Whale}/>
                 </div>    
@@ -190,6 +206,70 @@ export default function Home() {
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </section>
+
+        {/* Education Section */}
+        <section id="education" className="py-12 px-6 border-t border-gray-200 dark:border-gray-800">
+          <div className="space-y-4">
+            <div className="flex items-center gap-2">
+              <BookOpen className="h-5 w-5 text-blue-800 dark:text-blue-400" />
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Education</h2>
+            </div>
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex flex-col pt-4 md:flex-row md:items-center justify-between gap-4">
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">University of South Florida</h3>
+                    <p className="text-gray-500 dark:text-gray-400">Bachelor of Science in Computer Science</p>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      <Badge>GPA: 4.0</Badge>
+                      <Badge>Dean's List</Badge>
+                      <Badge>Director Award</Badge>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <p className="font-medium text-gray-900 dark:text-white">2024 - Present</p>
+                    <p className="text-gray-500 dark:text-gray-400">Tampa, Florida</p>
+                  </div>
+                </div>
+                <div className="mt-4">
+                  <p className="text-gray-700 dark:text-gray-300">Relevant Coursework:</p>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    <Badge variant="secondary">Data Structures</Badge>
+                    <Badge variant="secondary">Algorithms</Badge>
+                    <Badge variant="secondary">Computer Systems</Badge>
+                    <Badge variant="secondary">Software Engineering</Badge>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex flex-col pt-4 md:flex-row md:items-center justify-between gap-4">
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Nguyen Huu Huan High School</h3>
+                    <p className="text-gray-500 dark:text-gray-400">High School Diploma</p>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      <Badge>GPA: 3.9</Badge>
+                      <Badge>Dean's List</Badge>
+                      <Badge>HCMC English Olympiad</Badge>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <p className="font-medium text-gray-900 dark:text-white">2021 - 2024</p>
+                    <p className="text-gray-500 dark:text-gray-400">HCMC, Vietnam</p>
+                  </div>
+                </div>
+                <div className="mt-4">
+                  <p className="text-gray-700 dark:text-gray-300">Extracurriculars:</p>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    <Badge variant="secondary">Tech Chair @ NHH IT Club</Badge>
+                    <Badge variant="secondary">First Prize @ NHH Flashmob 2024</Badge>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
@@ -324,67 +404,92 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Education Section */}
-        <section id="education" className="py-12 px-6 border-t border-gray-200 dark:border-gray-800">
+        {/* Experience Section */}
+        <section id="Experience" className="py-12 px-6 border-t border-gray-200 dark:border-gray-800">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <BookOpen className="h-5 w-5 text-blue-800 dark:text-blue-400" />
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Education</h2>
+              <Briefcase className="h-5 w-5 text-blue-800 dark:text-blue-400" />
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Experience</h2>
             </div>
+
             <Card>
               <CardContent className="p-6">
                 <div className="flex flex-col pt-4 md:flex-row md:items-center justify-between gap-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">University of South Florida</h3>
-                    <p className="text-gray-500 dark:text-gray-400">Bachelor of Science in Computer Science</p>
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                    Committee Chair</h3>
+                    <p className="text-gray-500 dark:text-gray-400">USF Engineering Expo</p>
                     <div className="mt-2 flex flex-wrap gap-2">
-                      <Badge>GPA: 4.0</Badge>
-                      <Badge>Dean's List</Badge>
-                      <Badge>Director Award</Badge>
+                      <Badge>ReactJS</Badge>
+                      <Badge>TailwindCSS</Badge>
+                      <Badge>NodeJS</Badge>
+                      <Badge>Group Work</Badge>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <p className="font-medium text-gray-900 dark:text-white">2025 - Present</p>
+                    <p className="text-gray-500 dark:text-gray-400">Tampa, Florida</p>
+                  </div>
+                </div>
+                <div className="mt-3">
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    <p className="text-gray-700 dark:text-gray-300">• Collaborated with a team to develop projects that inspire children to develop a passion for engineering.</p>
+                    <p className="text-gray-700 dark:text-gray-300">• Designed and built a typing test with personalized feedback to enhance typing skills, featuring an engaging and visually appealing UI to captivate young learners.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex flex-col pt-4 md:flex-row md:items-center justify-between gap-4">
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Research Assistant</h3>
+                    <p className="text-gray-500 dark:text-gray-400">HCMC University of Technology and Education</p>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      <Badge>Deep Learning</Badge>
+                      <Badge>Data Science</Badge>
                     </div>
                   </div>
                   <div className="text-right">
                     <p className="font-medium text-gray-900 dark:text-white">2024 - Present</p>
-                    <p className="text-gray-500 dark:text-gray-400">Tampa, Florida</p>
+                    <p className="text-gray-500 dark:text-gray-400">Hybrid</p>
                   </div>
                 </div>
-                <div className="mt-4">
-                  <p className="text-gray-700 dark:text-gray-300">Relevant Coursework:</p>
+                <div className="mt-3">
                   <div className="mt-2 flex flex-wrap gap-2">
-                    <Badge variant="secondary">Data Structures</Badge>
-                    <Badge variant="secondary">Algorithms</Badge>
-                    <Badge variant="secondary">Computer Systems</Badge>
-                    <Badge variant="secondary">Software Engineering</Badge>
+                  <p className="text-gray-700 dark:text-gray-300">• Helped develop an advanced method to classify malware families using deep learning techniques.</p>
+                  <p className="text-gray-700 dark:text-gray-300">• Collected and processed data for cybersecurity analysis.</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
+
             <Card>
               <CardContent className="p-6">
                 <div className="flex flex-col pt-4 md:flex-row md:items-center justify-between gap-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Nguyen Huu Huan High School</h3>
-                    <p className="text-gray-500 dark:text-gray-400">High School Diploma</p>
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Teaching Assistant</h3>
+                    <p className="text-gray-500 dark:text-gray-400">HCMC University of Technology and Education</p>
                     <div className="mt-2 flex flex-wrap gap-2">
-                      <Badge>GPA: 3.9</Badge>
-                      <Badge>Dean's List</Badge>
-                      <Badge>HCMC English Olympiad</Badge>
+                      <Badge>Discrete Math</Badge>
+                      <Badge>Programming Basics</Badge>
                     </div>
                   </div>
                   <div className="text-right">
-                    <p className="font-medium text-gray-900 dark:text-white">2021 - 2024</p>
+                    <p className="font-medium text-gray-900 dark:text-white">2023 - 2024</p>
                     <p className="text-gray-500 dark:text-gray-400">HCMC, Vietnam</p>
                   </div>
                 </div>
-                <div className="mt-4">
-                  <p className="text-gray-700 dark:text-gray-300">Extracurriculars:</p>
+                <div className="mt-3">
                   <div className="mt-2 flex flex-wrap gap-2">
-                    <Badge variant="secondary">Tech Chair @ NHH IT Club</Badge>
-                    <Badge variant="secondary">First Prize @ NHH Flashmob 2024</Badge>
+                  <p className="text-gray-700 dark:text-gray-300">• Graded assignments and exams across multiple courses, ensuring consistent and fair evaluation standards.</p>
+                  <p className="text-gray-700 dark:text-gray-300">• Managed administrative tasks, maintaining accurate student records and preparing grade reports.</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
+
           </div>
         </section>
 
@@ -460,10 +565,12 @@ export default function Home() {
               </Card>
             </div>
             <div className="flex justify-center mt-8">
+            <a href="https://github.com/XuanGiaHanNguyen" target="_blank" rel="noopener noreferrer">
               <Button variant="outline">
                 View All Projects
                 <ExternalLink className="ml-2 h-4 w-4" />
               </Button>
+            </a>
             </div>
           </div>
         </section>
@@ -489,7 +596,7 @@ export default function Home() {
                       </Button>
                       <div>
                         <p className="text-sm text-gray-500 dark:text-gray-400">Website</p>
-                        <p className="font-medium text-gray-900 dark:text-white">contact@example.com</p>
+                        <p className="font-medium text-gray-900 dark:text-white">xuangiahannguyen.github.io/PortfolioPage/</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
@@ -571,18 +678,25 @@ export default function Home() {
             © {new Date().getFullYear()} Han Nguyen. All rights reserved.
           </p>
           <div className="flex gap-4">
-            <Button variant="ghost" size="icon" className="rounded-full">
-              <Github className="h-4 w-4" />
-              <span className="sr-only">GitHub</span>
-            </Button>
-            <Button variant="ghost" size="icon" className="rounded-full">
-              <Linkedin className="h-4 w-4" />
-              <span className="sr-only">LinkedIn</span>
-            </Button>
-            <Button variant="ghost" size="icon" className="rounded-full">
-              <Mail className="h-4 w-4" />
-              <span className="sr-only">Email</span>
-            </Button>
+            
+            <a href="https://github.com/XuanGiaHanNguyen" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="icon" className="rounded-full">
+                <Github className="h-4 w-4" />
+                <span className="sr-only">GitHub</span>
+              </Button>
+            </a>
+            <a href="https://www.linkedin.com/in/xuangiahannguyen/" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="icon" className="rounded-full">
+                <Linkedin className="h-4 w-4" />
+                <span className="sr-only">LinkedIn</span>
+              </Button>
+            </a>
+            <a href="mailto:xuangiahannguyen@gmail.com" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="icon" className="rounded-full">
+                <Mail className="h-4 w-4" />
+                <span className="sr-only">Email</span>
+              </Button>
+            </a>
           </div>
         </div>
       </footer>
