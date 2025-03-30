@@ -91,7 +91,7 @@ export default function Home() {
                   <Mail className="ml-2 h-4 w-4" />
                 </Button>
               </div>
-              <div className="flex gap-4 pt-4">
+              <div className="flex gap-4 pt-1">
                 <Button variant="ghost" size="icon" className="rounded-full">
                   <Github className="h-5 w-5" />
                   <span className="sr-only">GitHub</span>
@@ -121,10 +121,10 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-12 border-t border-gray-200 dark:border-gray-800">
+        <section id="about" className="py-12 px-6 border-t border-gray-200 dark:border-gray-800">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <User className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+              <User className="h-5 w-5 text-blue-800 dark:text-blue-400" />
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white">About Me</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
@@ -144,17 +144,17 @@ export default function Home() {
                   <Badge variant="secondary">Problem Solving</Badge>
                 </div>
               </div>
-              <Card>
-                <CardContent className="p-6">
+              <Card className="flex">
+                <CardContent className="p-6 flex justify-center items-center">
                   <div className="space-y-4">
                     <div className="flex items-center gap-2">
-                      <Award className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Achievements</h3>
+                      <Award className="h-5 w-5 text-blue-800 dark:text-blue-400" />
+                      <h3 className="text-xl font-semibold text-blue-900 dark:text-white">Achievements</h3>
                     </div>
                     <ul className="space-y-3">
                       <li className="flex items-start gap-2">
                         <div className="h-5 w-5 flex-shrink-0 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center mt-0.5">
-                          <span className="h-2.5 w-2.5 rounded-full bg-blue-600 dark:bg-blue-400" />
+                          <span className="h-2.5 w-2.5 rounded-full bg-blue-900 dark:bg-blue-400" />
                         </div>
                         <div>
                           <span className="font-medium text-gray-900 dark:text-white">GPA: 4.0</span>
@@ -162,21 +162,21 @@ export default function Home() {
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="h-5 w-5 flex-shrink-0 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center mt-0.5">
-                          <span className="h-2.5 w-2.5 rounded-full bg-blue-600 dark:bg-blue-400" />
+                          <span className="h-2.5 w-2.5 rounded-full bg-blue-900 dark:bg-blue-400" />
                         </div>
                         <div>
                           <span className="font-medium text-gray-900 dark:text-white">
-                            Dean's List of Fall 2023 Semester
+                            Selected for the Dean’s List - Fall 2024
                           </span>
                         </div>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="h-5 w-5 flex-shrink-0 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center mt-0.5">
-                          <span className="h-2.5 w-2.5 rounded-full bg-blue-600 dark:bg-blue-400" />
+                          <span className="h-2.5 w-2.5 rounded-full bg-blue-900 dark:bg-blue-400" />
                         </div>
                         <div>
                           <span className="font-medium text-gray-900 dark:text-white">
-                            University of South Florida Gold & Presidential Award
+                            University of South Florida Green & Gold Director Award
                           </span>
                         </div>
                       </li>
@@ -189,17 +189,17 @@ export default function Home() {
         </section>
 
         {/* Skills Section */}
-        <section id="skills" className="py-12 border-t border-gray-200 dark:border-gray-800">
+        <section id="skills" className="py-12 px-6 border-t border-gray-200 dark:border-gray-800">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <Code className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+              <Code className="h-5 w-5 text-blue-800 dark:text-blue-400" />
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Skills</h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <Card className="overflow-hidden">
-                <div className="h-2 bg-blue-500" />
+                <div className="h-2 bg-blue-900" />
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-gray-900 dark:text-white">Frontend</h3>
+                  <h3 className="font-semibold text-gray-900 dark:text-white pt-3">Frontend</h3>
                   <ul className="mt-2 space-y-1 text-sm text-gray-700 dark:text-gray-300">
                     <li>HTML/CSS</li>
                     <li>JavaScript</li>
@@ -209,9 +209,9 @@ export default function Home() {
                 </CardContent>
               </Card>
               <Card className="overflow-hidden">
-                <div className="h-2 bg-green-500" />
+                <div className="h-2 bg-blue-900" />
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-gray-900 dark:text-white">Backend</h3>
+                  <h3 className="font-semibold text-gray-900 dark:text-white pt-3">Backend</h3>
                   <ul className="mt-2 space-y-1 text-sm text-gray-700 dark:text-gray-300">
                     <li>Python</li>
                     <li>Java</li>
@@ -221,9 +221,9 @@ export default function Home() {
                 </CardContent>
               </Card>
               <Card className="overflow-hidden">
-                <div className="h-2 bg-purple-500" />
+                <div className="h-2 bg-blue-900" />
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-gray-900 dark:text-white">Tools</h3>
+                  <h3 className="font-semibold text-gray-900 dark:text-white pt-3">Tools</h3>
                   <ul className="mt-2 space-y-1 text-sm text-gray-700 dark:text-gray-300">
                     <li>Git</li>
                     <li>VS Code</li>
@@ -233,9 +233,9 @@ export default function Home() {
                 </CardContent>
               </Card>
               <Card className="overflow-hidden">
-                <div className="h-2 bg-orange-500" />
+                <div className="h-2 bg-blue-900" />
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-gray-900 dark:text-white">Other</h3>
+                  <h3 className="font-semibold text-gray-900 dark:text-white pt-3">Other</h3>
                   <ul className="mt-2 space-y-1 text-sm text-gray-700 dark:text-gray-300">
                     <li>Robotics</li>
                     <li>Problem Solving</li>
@@ -249,26 +249,26 @@ export default function Home() {
         </section>
 
         {/* Education Section */}
-        <section id="education" className="py-12 border-t border-gray-200 dark:border-gray-800">
+        <section id="education" className="py-12 px-6 border-t border-gray-200 dark:border-gray-800">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <BookOpen className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+              <BookOpen className="h-5 w-5 text-blue-800 dark:text-blue-400" />
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Education</h2>
             </div>
             <Card>
               <CardContent className="p-6">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div className="flex flex-col pt-4 md:flex-row md:items-center justify-between gap-4">
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white">University of South Florida</h3>
                     <p className="text-gray-500 dark:text-gray-400">Bachelor of Science in Computer Science</p>
                     <div className="mt-2 flex flex-wrap gap-2">
                       <Badge>GPA: 4.0</Badge>
-                      <Badge variant="outline">Dean's List</Badge>
-                      <Badge variant="outline">Presidential Award</Badge>
+                      <Badge>Dean's List</Badge>
+                      <Badge>Director Award</Badge>
                     </div>
                   </div>
                   <div className="text-right">
-                    <p className="font-medium text-gray-900 dark:text-white">2023 - Present</p>
+                    <p className="font-medium text-gray-900 dark:text-white">2024 - Present</p>
                     <p className="text-gray-500 dark:text-gray-400">Tampa, Florida</p>
                   </div>
                 </div>
@@ -283,14 +283,40 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex flex-col pt-4 md:flex-row md:items-center justify-between gap-4">
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Nguyen Huu Huan High School</h3>
+                    <p className="text-gray-500 dark:text-gray-400">High School Diploma</p>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      <Badge>GPA: 3.9</Badge>
+                      <Badge>Dean's List</Badge>
+                      <Badge>HCMC English Olympiad</Badge>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <p className="font-medium text-gray-900 dark:text-white">2021 - 2024</p>
+                    <p className="text-gray-500 dark:text-gray-400">HCMC, Vietnam</p>
+                  </div>
+                </div>
+                <div className="mt-4">
+                  <p className="text-gray-700 dark:text-gray-300">Extracurriculars:</p>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    <Badge variant="secondary">Tech Chair @ NHH IT Club</Badge>
+                    <Badge variant="secondary">First Prize @ NHH Flashmob 2024</Badge>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="py-12 border-t border-gray-200 dark:border-gray-800">
+        <section id="projects" className="py-12 px-6 border-t border-gray-200 dark:border-gray-800">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <Code className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+              <Code className="h-5 w-5 text-blue-800 dark:text-blue-400" />
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Projects</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
@@ -298,19 +324,19 @@ export default function Home() {
               <Card className="overflow-hidden">
                 <div className="aspect-video bg-gray-100 dark:bg-gray-800 relative">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Code className="h-10 w-10 text-gray-400 dark:text-gray-600" />
+                   
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Project Title</h3>
+                  <h3 className="text-xl mt-4 font-semibold text-gray-900 dark:text-white">Project Title</h3>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    <Badge variant="achievement">React</Badge>
+                    <Badge variant="achievement">Node.js</Badge>
+                    <Badge variant="achievement">MongoDB</Badge>
+                  </div>
                   <p className="text-gray-500 dark:text-gray-400 mt-2">
                     A brief description of the project, what it does, and the technologies used.
                   </p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    <Badge>React</Badge>
-                    <Badge>Node.js</Badge>
-                    <Badge>MongoDB</Badge>
-                  </div>
                   <div className="mt-4 flex gap-2">
                     <Button variant="outline" size="sm">
                       <Github className="mr-2 h-4 w-4" />
@@ -332,15 +358,16 @@ export default function Home() {
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Project Title</h3>
+                  <h3 className="text-xl mt-4 font-semibold text-gray-900 dark:text-white">Project Title</h3>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    <Badge variant="achievement">Python</Badge>
+                    <Badge variant="achievement">TensorFlow</Badge>
+                    <Badge variant="achievement">Flask</Badge>
+                  </div>
                   <p className="text-gray-500 dark:text-gray-400 mt-2">
                     A brief description of the project, what it does, and the technologies used.
                   </p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    <Badge>Python</Badge>
-                    <Badge>TensorFlow</Badge>
-                    <Badge>Flask</Badge>
-                  </div>
+                  
                   <div className="mt-4 flex gap-2">
                     <Button variant="outline" size="sm">
                       <Github className="mr-2 h-4 w-4" />
@@ -364,10 +391,10 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-12 border-t border-gray-200 dark:border-gray-800">
+        <section id="contact" className="py-12 px-6 border-t border-gray-200 dark:border-gray-800">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <Mail className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+              <Mail className="h-5 w-5 text-blue-800 dark:text-blue-400" />
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Contact</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
