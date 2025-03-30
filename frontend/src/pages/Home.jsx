@@ -217,7 +217,7 @@ export default function Home() {
                   <h3 className="font-semibold text-gray-900 dark:text-white pt-3">Backend</h3>
                   <ul className="mt-2 space-y-1 text-sm text-gray-700 dark:text-gray-300">
                     <li>Python</li>
-                    <li>Java</li>
+                    <li>JavaScript</li>
                     <li>Node.js</li>
                     <li>SQL</li>
                   </ul>
@@ -228,10 +228,10 @@ export default function Home() {
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-gray-900 dark:text-white pt-3">Tools</h3>
                   <ul className="mt-2 space-y-1 text-sm text-gray-700 dark:text-gray-300">
-                    <li>Git</li>
+                    <li>GitHub</li>
                     <li>VS Code</li>
                     <li>Docker</li>
-                    <li>Linux</li>
+                    <li>PyCharm</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -240,7 +240,6 @@ export default function Home() {
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-gray-900 dark:text-white pt-3">Other</h3>
                   <ul className="mt-2 space-y-1 text-sm text-gray-700 dark:text-gray-300">
-                    <li>Robotics</li>
                     <li>Problem Solving</li>
                     <li>Team Collaboration</li>
                     <li>Project Management</li>
@@ -393,7 +392,7 @@ export default function Home() {
                     <Badge variant="achievement">SupaBase</Badge>
                   </div>
                   <p className="text-gray-500 dark:text-gray-400 mt-2">
-                    A brief description of the project, what it does, and the technologies used.
+                  Web platform to connect K-12 students with qualified tutors based on skill level, time availability.
                   </p>
                   <div className="mt-4 flex gap-2">
                     <Button variant="outline" size="sm">
@@ -423,7 +422,7 @@ export default function Home() {
                     <Badge variant="achievement">MongoDB</Badge>
                   </div>
                   <p className="text-gray-500 dark:text-gray-400 mt-2">
-                    A brief description of the project, what it does, and the technologies used.
+                    Web platform where users can share blogs, create accounts and more.
                   </p>
                   
                   <div className="mt-4 flex gap-2">
