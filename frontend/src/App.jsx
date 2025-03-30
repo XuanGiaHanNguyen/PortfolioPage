@@ -7,7 +7,7 @@ function App() {
     <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/PortfolioPage" element={<Home />} />
         </Routes>
       </Router>
     </ThemeProvider>
