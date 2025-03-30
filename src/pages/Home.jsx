@@ -1,7 +1,8 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { ModeToggle } from "../components/ModeToggle"
 import { Button } from "../components/ui/Button"
 import { Badge } from "../components/ui/Badge"
+import { motion } from "framer-motion"
 import { Card, CardContent } from "../components/ui/Card"
 import { useTheme } from "../components/ThemeProvider"
 import { Github,  Linkedin, Mail, ExternalLink, Code, BookOpen, Award, User, Menu, Briefcase } from "lucide-react"
@@ -19,6 +20,12 @@ export default function Home() {
   
   const { theme, setTheme } = useTheme()
   console.log("Current theme in Home:", theme)
+
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950">
@@ -80,38 +87,58 @@ export default function Home() {
       <main className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <section id="home" className="py-12 md:py-20">
-          <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center px-6">
-            <div className="space-y-4">
-              <div className="flex flex-row gap-2">
-                <div className="inline-block rounded-lg bg-gray-100 dark:bg-gray-800 dark:text-gray-300 px-3 py-1 text-sm">
-                Computer Science
-                </div>
-                <div className="inline-block rounded-lg bg-gray-100 dark:bg-gray-800 dark:text-gray-300 px-3 py-1 text-sm">
-                Full-Stack Developer
-                </div>
-              </div>
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-gray-900 dark:text-white">
-                My name is <span className="text-blue-900 dark:text-blue-400">Han Nguyen</span>
-              </h1>
-              <p className="text-xl text-gray-500 dark:text-gray-400">
-                Passionate about Full-stack Development, Machine Learning and Whales.
-              </p>
-              <div className="flex gap-4">
-              <a href="https://github.com/XuanGiaHanNguyen" target="_blank" rel="noopener noreferrer">
-                <Button>
-                  View Projects
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
-              </a>
-              <a href="#contact">
-                <Button variant="outline">
-                  Contact Me
-                  <Mail className="ml-2 h-4 w-4" />
-                </Button>
-              </a>
-              </div>
-              <div className="flex gap-4 pt-1">
-              <a href="https://github.com/XuanGiaHanNguyen" target="_blank" rel="noopener noreferrer">
+      <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center px-6">
+        <div className="space-y-4">
+          <div className="flex flex-row gap-2">
+            <div className="inline-block rounded-lg bg-gray-100 dark:bg-gray-800 dark:text-gray-300 px-3 py-1 text-sm">
+              Computer Science
+            </div>
+            <div className="inline-block rounded-lg bg-gray-100 dark:bg-gray-800 dark:text-gray-300 px-3 py-1 text-sm">
+              Full-Stack Developer
+            </div>
+          </div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-gray-900 dark:text-white"
+          >
+            My name is <span className="text-blue-900 dark:text-blue-400">Han Nguyen</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl text-gray-500 dark:text-gray-400"
+          >
+            Passionate about Full-stack Development, Machine Learning and Whales.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex gap-4"
+          >
+            <a href="https://github.com/XuanGiaHanNguyen" target="_blank" rel="noopener noreferrer">
+              <Button>
+                View Projects
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
+            <a href="#contact">
+              <Button variant="outline">
+                Contact Me
+                <Mail className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="flex gap-4 pt-1"
+          >
+            <a href="https://github.com/XuanGiaHanNguyen" target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="icon" className="rounded-full">
                 <Github className="h-4 w-4" />
                 <span className="sr-only">GitHub</span>
@@ -129,17 +156,42 @@ export default function Home() {
                 <span className="sr-only">Email</span>
               </Button>
             </a>
-              </div>
-            </div>
-            <div className="flex justify-center hidden md:flex">
-              <div className="relative aspect-square w-[300px] h-[300px] md:w-[390px] md:h-[390px] rounded-full bg-blue-50 dark:bg-gray-700 p-1">
-                <div className="absolute inset-0 rounded-full overflow-hidden">
-                  <img src={Whale}/>
-                </div>    
-              </div>
-            </div>
-          </div>
-        </section>
+          </motion.div>
+        </div>
+        <div className="flex justify-center hidden md:flex">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{
+              opacity: isLoaded ? 1 : 0,
+              scale: isLoaded ? 1 : 0.9,
+              y: [0, -15, 0],
+            }}
+            transition={{
+              opacity: { duration: 0.8 },
+              scale: { duration: 0.8 },
+              y: {
+                duration: 4,
+                repeat: Number.POSITIVE_INFINITY,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              },
+            }}
+            className="relative aspect-square w-[300px] h-[300px] md:w-[390px] md:h-[390px] rounded-full bg-blue-50 dark:bg-sky-100 p-1"
+          >
+            <motion.div
+              className="absolute inset-0 rounded-full overflow-hidden"
+              whileHover={{
+                scale: 1.05,
+                rotate: 10,
+                transition: { duration: 0.5 },
+              }}
+            >
+              <img src={Whale} alt="Whale illustration" />
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
 
         {/* About Section */}
         <section id="about" className="py-12 px-6 border-t border-gray-200 dark:border-gray-800">
@@ -151,7 +203,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
                 <p className="text-lg text-gray-700 dark:text-gray-300">
-                  Hello everyone, "Whalecome" to my little corner of the internet! I am currently a student at University of South Florida and incoming SWE at FPT Software.
+                  Hello everyone, "Whalecome" to my little corner of the internet! I am currently a student at University of South Florida and incoming SWE intern at FPT Software.
                 </p>
                 <p className="text-lg text-gray-700 dark:text-gray-300">
                   Please feel free to explore around and I would be more than happy to connect with everyone.
