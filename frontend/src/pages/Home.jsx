@@ -6,6 +6,9 @@ import { Card, CardContent } from "../components/ui/Card"
 import { useTheme } from "../components/ThemeProvider"
 import { Github, Linkedin, Mail, ExternalLink, Code, BookOpen, Award, User, Menu } from "lucide-react"
 
+import Dash from "../assets/Dash.png"
+import Toast from "../assets/Toast.png"
+
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   
@@ -324,15 +327,17 @@ export default function Home() {
               <Card className="overflow-hidden">
                 <div className="aspect-video bg-gray-100 dark:bg-gray-800 relative">
                   <div className="absolute inset-0 flex items-center justify-center">
-                   
+                   <img src={Toast} alt="" className="object-cover w-full h-full"/>
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl mt-4 font-semibold text-gray-900 dark:text-white">Project Title</h3>
+                  <h3 className="text-xl mt-4 font-semibold text-gray-900 dark:text-white">ToastTutor</h3>
                   <div className="mt-2 flex flex-wrap gap-2">
                     <Badge variant="achievement">React</Badge>
-                    <Badge variant="achievement">Node.js</Badge>
-                    <Badge variant="achievement">MongoDB</Badge>
+                    <Badge variant="achievement">Stripe</Badge>
+                    <Badge variant="achievement">Redis</Badge>
+                    <Badge variant="achievement">Django</Badge>
+                    <Badge variant="achievement">SupaBase</Badge>
                   </div>
                   <p className="text-gray-500 dark:text-gray-400 mt-2">
                     A brief description of the project, what it does, and the technologies used.
@@ -354,15 +359,15 @@ export default function Home() {
               <Card className="overflow-hidden">
                 <div className="aspect-video bg-gray-100 dark:bg-gray-800 relative">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Code className="h-10 w-10 text-gray-400 dark:text-gray-600" />
+                    <img src={Dash} alt="" className="object-cover w-full h-full"/>
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl mt-4 font-semibold text-gray-900 dark:text-white">Project Title</h3>
+                  <h3 className="text-xl mt-4 font-semibold text-gray-900 dark:text-white">DashConnect</h3>
                   <div className="mt-2 flex flex-wrap gap-2">
-                    <Badge variant="achievement">Python</Badge>
-                    <Badge variant="achievement">TensorFlow</Badge>
-                    <Badge variant="achievement">Flask</Badge>
+                    <Badge variant="achievement">NodeJS</Badge>
+                    <Badge variant="achievement">ExpressJS</Badge>
+                    <Badge variant="achievement">MongoDB</Badge>
                   </div>
                   <p className="text-gray-500 dark:text-gray-400 mt-2">
                     A brief description of the project, what it does, and the technologies used.
@@ -398,7 +403,7 @@ export default function Home() {
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Contact</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
-              <Card>
+              <Card className="flex justify-center items-center">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Get In Touch</h3>
                   <p className="text-gray-500 dark:text-gray-400 mt-2">
@@ -407,11 +412,20 @@ export default function Home() {
                   <div className="mt-6 space-y-4">
                     <div className="flex items-center gap-3">
                       <Button variant="outline" size="icon" className="h-8 w-8 rounded-full">
+                        <Code className="h-4 w-4" />
+                      </Button>
+                      <div>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">Website</p>
+                        <p className="font-medium text-gray-900 dark:text-white">contact@example.com</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Button variant="outline" size="icon" className="h-8 w-8 rounded-full">
                         <Mail className="h-4 w-4" />
                       </Button>
                       <div>
                         <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
-                        <p className="font-medium text-gray-900 dark:text-white">contact@example.com</p>
+                        <p className="font-medium text-gray-900 dark:text-white">xuangiahannguyen@gmail.com</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
@@ -420,7 +434,7 @@ export default function Home() {
                       </Button>
                       <div>
                         <p className="text-sm text-gray-500 dark:text-gray-400">LinkedIn</p>
-                        <p className="font-medium text-gray-900 dark:text-white">linkedin.com/in/khangphan</p>
+                        <p className="font-medium text-gray-900 dark:text-white">linkedin.com/in/xuangiahannguyen</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
@@ -429,13 +443,13 @@ export default function Home() {
                       </Button>
                       <div>
                         <p className="text-sm text-gray-500 dark:text-gray-400">GitHub</p>
-                        <p className="font-medium text-gray-900 dark:text-white">github.com/khangphan</p>
+                        <p className="font-medium text-gray-900 dark:text-white">github.com/XuanGiaHanNguyen</p>
                       </div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="py-4">
                 <CardContent className="p-6">
                   <form className="space-y-4">
                     <div className="space-y-2">
