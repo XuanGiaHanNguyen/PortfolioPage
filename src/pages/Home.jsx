@@ -151,24 +151,21 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
                 <p className="text-lg text-gray-700 dark:text-gray-300">
-                  Hello everyone, welcome to my Portfolio! I am a Freshman majoring in Computer Science at the
-                  University of South Florida. I am passionate about coding, hackathons, and programming with robots.
+                  Hello everyone, "Whalecome" to my little corner of the internet! I am currently a student at University of South Florida and incoming SWE at FPT Software.
                 </p>
                 <p className="text-lg text-gray-700 dark:text-gray-300">
-                  When I'm not coding, you'll often find me hanging out, enjoying good food, or catching up on
-                  much-needed sleep.
+                  Please feel free to explore around and I would be more than happy to connect with everyone.
                 </p>
                 <div className="flex flex-wrap gap-2 pt-2">
                   <Badge variant="secondary">Computer Science</Badge>
-                  <Badge variant="secondary">Robotics</Badge>
-                  <Badge variant="secondary">Hackathons</Badge>
-                  <Badge variant="secondary">Problem Solving</Badge>
+                  <Badge variant="secondary">Machine Learning</Badge>
+                  <Badge variant="secondary">Full-stack Development</Badge>
                 </div>
               </div>
               <Card className="flex">
                 <CardContent className="p-6 flex justify-center items-center">
                   <div className="space-y-4">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 mt-4">
                       <Award className="h-5 w-5 text-blue-800 dark:text-blue-400" />
                       <h3 className="text-xl font-semibold text-blue-900 dark:text-white">Achievements</h3>
                     </div>
