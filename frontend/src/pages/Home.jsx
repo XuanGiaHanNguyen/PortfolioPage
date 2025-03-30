@@ -4,10 +4,14 @@ import { Button } from "../components/ui/Button"
 import { Badge } from "../components/ui/Badge"
 import { Card, CardContent } from "../components/ui/Card"
 import { useTheme } from "../components/ThemeProvider"
-import { Github, Linkedin, Mail, ExternalLink, Code, BookOpen, Award, User, Menu } from "lucide-react"
+import { Github,  Linkedin, Mail, ExternalLink, Code, BookOpen, Award, User, Menu } from "lucide-react"
 
 import Dash from "../assets/Dash.png"
 import Toast from "../assets/Toast.png"
+import MERN from "../assets/MERN.png"
+import ML from "../assets/ML.png"
+import Whale from "../assets/whale.png"
+import Wave from "../assets/wave.png"
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -65,7 +69,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <section id="home" className="py-12 md:py-20">
           <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center px-6">
@@ -82,7 +86,7 @@ export default function Home() {
                 My name is <span className="text-blue-900 dark:text-blue-400">Han Nguyen</span>
               </h1>
               <p className="text-xl text-gray-500 dark:text-gray-400">
-                Passionate about coding, hackathons, and programming with robots.
+                Passionate about Full-stack Development, Machine Learning and Whales.
               </p>
               <div className="flex gap-4">
                 <Button>
@@ -110,14 +114,10 @@ export default function Home() {
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="relative w-[280px] h-[280px] md:w-[350px] md:h-[350px] rounded-full bg-gradient-to-r from-blue-500/20 to-blue-600/40 p-1">
+              <div className="relative w-[300px] h-[300px] md:w-[390px] md:h-[390px] rounded-full bg-blue-50 p-1">
                 <div className="absolute inset-0 rounded-full overflow-hidden">
-                  <img
-                    src="https://sjc.microlink.io/AoLOeozNlwZuZVpDKUOkiQxnca6yLXeZAPrWnoEI3B6w3_wJj8clLbxaXwmpkL0ngnbqSqpLeoZmcz6cZZPqkw.jpeg"
-                    alt="Khang Phan"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                  <img src={Whale}/>
+                </div>    
               </div>
             </div>
           </div>
@@ -247,6 +247,59 @@ export default function Home() {
                   </ul>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* certification Section */}
+        <section id="certification" className="py-12 px-6 border-t border-gray-200 dark:border-gray-800">
+          <div className="space-y-4">
+            <div className="flex items-center gap-2">
+              <Award className="h-5 w-5 text-blue-800 dark:text-blue-400" />
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Certifications</h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Project 1 */}
+              <Card className="overflow-hidden">
+                <div className="aspect-video bg-gray-100 dark:bg-gray-800 relative">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                   <img src={ML} alt="" className="object-cover w-full h-full"/>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl mt-4 font-semibold text-gray-900 dark:text-white">Artificial Intelligence Foundations: Machine Learning</h3>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    <Badge variant="achievement">Machine Learning</Badge>
+                    <Badge variant="achievement">Artificial Intelligence</Badge>
+                  </div>
+                  <p className="text-gray-500 dark:text-gray-400 mt-2">
+                    A brief description of the project, what it does, and the technologies used.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Project 1 */}
+              <Card className="overflow-hidden">
+                <div className="aspect-video bg-gray-100 dark:bg-gray-800 relative">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                   <img src={MERN} alt="" className="object-cover w-full h-full"/>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl mt-4 font-semibold text-gray-900 dark:text-white">
+                  App Development with the MERN Stack</h3>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    <Badge variant="achievement">ExpressJS</Badge>
+                    <Badge variant="achievement">Full-stack Development</Badge>
+                    <Badge variant="achievement">MongoDB</Badge>
+                  </div>
+                  <p className="text-gray-500 dark:text-gray-400 mt-2">
+                    A brief description of the project, what it does, and the technologies used.
+                  </p>
+                </CardContent>
+              </Card>
+
+              
             </div>
           </div>
         </section>
@@ -458,7 +511,7 @@ export default function Home() {
                       </label>
                       <input
                         id="name"
-                        className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400"
                         placeholder="Your name"
                       />
                     </div>
@@ -469,7 +522,7 @@ export default function Home() {
                       <input
                         id="email"
                         type="email"
-                        className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 "
                         placeholder="Your email"
                       />
                     </div>
@@ -479,7 +532,7 @@ export default function Home() {
                       </label>
                       <textarea
                         id="message"
-                        className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[120px]"
+                        className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 min-h-[120px]"
                         placeholder="Your message"
                       />
                     </div>
@@ -495,7 +548,7 @@ export default function Home() {
       <footer className="border-t border-gray-200 dark:border-gray-800 py-6 md:py-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-center text-sm leading-loose text-gray-500 dark:text-gray-400 md:text-left">
-            © {new Date().getFullYear()} Tuan Khang Phan. All rights reserved.
+            © {new Date().getFullYear()} Han Nguyen. All rights reserved.
           </p>
           <div className="flex gap-4">
             <Button variant="ghost" size="icon" className="rounded-full">
