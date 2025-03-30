@@ -272,7 +272,7 @@ export default function Home() {
                     <Badge variant="achievement">Artificial Intelligence</Badge>
                   </div>
                   <p className="text-gray-500 dark:text-gray-400 mt-2">
-                    A brief description of the project, what it does, and the technologies used.
+                    Basics of Machine Learning and AI.
                   </p>
                 </CardContent>
               </Card>
@@ -293,7 +293,7 @@ export default function Home() {
                     <Badge variant="achievement">MongoDB</Badge>
                   </div>
                   <p className="text-gray-500 dark:text-gray-400 mt-2">
-                    A brief description of the project, what it does, and the technologies used.
+                    Introductionary course to Full-stack development and the fundamentals of NodeJS, ExpressJS, ReactJS and MongoDB.
                   </p>
                 </CardContent>
               </Card>
