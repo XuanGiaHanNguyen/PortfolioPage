@@ -13,6 +13,8 @@ export function ThemeProvider({
   storageKey = "vite-ui-theme", 
   ...props 
 }) {
+
+  
   // Initialize theme state from localStorage or default
   const [theme, setTheme] = useState(() => {
     // Check if localStorage is available (client-side)
@@ -36,27 +38,31 @@ export function ThemeProvider({
   }
   
   // Apply theme effect
-  useEffect(() => {
-    // Get the document root element
-    const root = window.document.documentElement
-    
-    // Determine the actual theme to use
-    const newResolvedTheme = resolveTheme(theme)
-    setResolvedTheme(newResolvedTheme)
-    
-    // Debug - log current state
-    console.log("Current theme:", theme)
-    console.log("Resolved theme:", newResolvedTheme)
-    
-    // Remove both theme classes
-    root.classList.remove("light", "dark")
-    
-    // Add the appropriate class
-    root.classList.add(newResolvedTheme)
-    
-    // Store theme preference in localStorage
-    localStorage.setItem(storageKey, theme)
-  }, [theme, storageKey])
+ // Apply theme effect
+useEffect(() => {
+  // Get the document root element
+  const root = window.document.documentElement
+  
+  // Determine the actual theme to use
+  const newResolvedTheme = resolveTheme(theme)
+  setResolvedTheme(newResolvedTheme)
+  
+  // Debug - log current state
+  console.log("Current theme:", theme)
+  console.log("Resolved theme:", newResolvedTheme)
+  
+  // Remove both theme classes
+  root.classList.remove("light", "dark")
+  
+  // Add the appropriate class
+  root.classList.add(newResolvedTheme)
+  
+  // Force stylesheet update - ADD THIS LINE
+  document.body.style.colorScheme = newResolvedTheme
+  
+  // Store theme preference in localStorage
+  localStorage.setItem(storageKey, theme)
+}, [theme, storageKey])
   
   // Listen for system theme changes
   useEffect(() => {

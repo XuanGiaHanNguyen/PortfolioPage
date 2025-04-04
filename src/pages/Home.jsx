@@ -80,7 +80,6 @@ function useScrollAnimation() {
 }
 
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const { theme, setTheme } = useTheme()
   console.log("Current theme in Home:", theme)
@@ -673,6 +672,17 @@ export default function Home() {
                 ],
               },
               {
+                title: "Tech Chair",
+                company: "",
+                badges: ["TensorFlow", "Python", "NodeJS", "NumPy"],
+                period: "2025 - Present",
+                location: "Tampa, Florida",
+                description: [
+                  "• Led technical workshops, empowering students to build full-stack applications and AI models.",
+                  "• Established industry partnerships providing members with real-world BCI exposure.",
+                ],
+              },
+              {
                 title: "Research Assistant",
                 company: "HCMC University of Technology and Education",
                 badges: ["Deep Learning", "Data Science"],
@@ -811,7 +821,7 @@ export default function Home() {
                     },
                   }}
                 >
-                  <Card className="overflow-hidden">
+                  <Card className="overflow-hidden h-full">
                     <motion.div
                       className="aspect-video bg-gray-100 dark:bg-gray-800 relative"
                       whileHover={{ scale: 1.03 }}
