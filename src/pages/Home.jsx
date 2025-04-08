@@ -14,7 +14,6 @@ import ML from "../assets/ML.png"
 import Pytorch from "../assets/PyTorch.png"
 import Whale from "../assets/whale.png"
 
-
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -83,6 +82,49 @@ export default function Home() {
 
   const { theme, setTheme } = useTheme()
   console.log("Current theme in Home:", theme)
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('sending');
+    setErrorMessage('');
+    
+    try {
+      const response = await fetch("https://formspree.io/f/mqapgrge", { // Replace YOUR_FORM_ID with your Formspree form ID
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ fullName: '', email: '', message: '' });
+      } else {
+        const data = await response.text();
+        setStatus('error');
+        setErrorMessage('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setStatus('error');
+      setErrorMessage('Failed to send message. Please try again.');
+    }
+  };
 
   const [isLoaded, setIsLoaded] = useState(false)
 
@@ -938,8 +980,8 @@ export default function Home() {
                   <CardContent className="p-6">
                     <motion.form variants={containerVariants} className="space-y-4">
                       {[
-                        { id: "name", label: "Name", type: "text", placeholder: "Your name" },
-                        { id: "email", label: "Email", type: "email", placeholder: "Your email" },
+                        { id: "name", label: "Name", type: "text", placeholder: "Your name"},
+                        { id: "email", label: "Email", type: "email", placeholder: "Your email"},
                         { id: "message", label: "Message", type: "textarea", placeholder: "Your message" },
                       ].map((field, index) => (
                         <motion.div
@@ -962,6 +1004,8 @@ export default function Home() {
                               id={field.id}
                               className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 min-h-[120px]"
                               placeholder={field.placeholder}
+                              value={formData[field.id]}
+                              onChange={handleChange}
                             />
                           ) : (
                             <input
@@ -969,6 +1013,8 @@ export default function Home() {
                               type={field.type}
                               className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400"
                               placeholder={field.placeholder}
+                              value={formData[field.id]}
+                              onChange={handleChange}
                             />
                           )}
                         </motion.div>
