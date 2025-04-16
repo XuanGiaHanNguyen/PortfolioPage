@@ -125,7 +125,7 @@ export default function ExperienceCard() {
           animate="visible"
         >
           <Card>
-            <CardContent className="pb-2 pt-4 ">
+            <CardContent className="pb-2 pt-6 ">
               {/* Company header */}
               <div className="flex items-start gap-4 mb-4">
                 
