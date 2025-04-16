@@ -5,6 +5,7 @@ import { Badge } from "../components/ui/Badge"
 import { motion , useAnimation} from "framer-motion"
 import { Card, CardContent } from "../components/ui/Card"
 import { useTheme } from "../components/ThemeProvider"
+import ExperienceCard from "../components/experience-card"
 import { Github,  Linkedin, Mail, ExternalLink, Code, BookOpen, Award, User, Menu, Briefcase } from "lucide-react"
 
 import Dash from "../assets/Dash.png"
@@ -696,12 +697,25 @@ export default function Home() {
           animate={experienceAnimation.controls}
         >
           <div className="space-y-4">
-            <motion.div variants={itemVariants} className="flex items-center gap-2">
-              <Briefcase className="h-5 w-5 text-blue-800 dark:text-blue-400" />
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Experience</h2>
+            <motion.div variants={itemVariants} className="flex flex-col gap-2">
+              <div className="flex flex-row gap-2">
+                <Briefcase className="h-8 w-5 text-blue-800 dark:text-blue-400" />
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Experience</h2>
+              </div>
+              <ExperienceCard />
             </motion.div>
 
             {[
+              {
+                title: "Incoming Software Engineer Intern",
+                company: "FPT Software",
+                badges: ["MERN", "PostgreSQL", "NodeJS"],
+                period: "2025 - Present",
+                location: "HCMC, VN",
+                description: [
+                  "• contributing to enterprise-level software development projects.",
+                ],
+              },
               {
                 title: "Committee Chair",
                 company: "USF Engineering Expo",
@@ -722,28 +736,6 @@ export default function Home() {
                 description: [
                   "• Led technical workshops, empowering students to build full-stack applications and AI models.",
                   "• Established industry partnerships providing members with real-world BCI exposure.",
-                ],
-              },
-              {
-                title: "Research Assistant",
-                company: "HCMC University of Technology and Education",
-                badges: ["Deep Learning", "Data Science"],
-                period: "2024 - Present",
-                location: "Hybrid",
-                description: [
-                  "• Helped develop an advanced method to classify malware families using deep learning techniques.",
-                  "• Collected and processed data for cybersecurity analysis.",
-                ],
-              },
-              {
-                title: "Teaching Assistant",
-                company: "HCMC University of Technology and Education",
-                badges: ["Discrete Math", "Programming Basics"],
-                period: "2023 - 2024",
-                location: "HCMC, Vietnam",
-                description: [
-                  "• Graded assignments and exams across multiple courses, ensuring consistent and fair evaluation standards.",
-                  "• Managed administrative tasks, maintaining accurate student records and preparing grade reports.",
                 ],
               },
             ].map((experience, index) => (
