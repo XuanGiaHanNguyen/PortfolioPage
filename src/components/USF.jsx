@@ -65,28 +65,17 @@ const groupExperiencesByCompany = (experiences) => {
   }));
 };
 
-export default function ExperienceCard() {
+export default function USFCard() {
   const experiences = [
     {
-      title: "Research Assistant",
-      company: "HCMC University of Technology and Education",
-      badges: ["Deep Learning", "Data Science"],
-      period: "2024 - Present",
+      title: "Committee Chair",
+      company: "USF Engineering Expo",
+      badges: ["ReactJS", "MongoDB", "NodeJS", "Teamwork"],
+      period: "2025 - Present",
       location: "Hybrid",
       description: [
-        "• Helped develop an advanced method to classify malware families using deep learning techniques.",
-        "• Collected and processed data for cybersecurity analysis.",
-      ],
-    },
-    {
-      title: "Teaching Assistant",
-      company: "HCMC University of Technology and Education",
-      badges: ["Discrete Math", "Programming Basics"],
-      period: "2023 - 2024",
-      location: "HCMC, Vietnam",
-      description: [
-        "• Graded assignments and exams across multiple courses, ensuring consistent and fair evaluation standards.",
-        "• Managed administrative tasks, maintaining accurate student records and preparing grade reports.",
+        "• Collaborated with a team to develop projects that inspire children to develop a passion for engineering.",
+        "• Designed and showcased an engaging typing test with personalized feedback at Field Day, captivating both kids and adults.",
       ],
     },
   ];

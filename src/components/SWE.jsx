@@ -65,28 +65,17 @@ const groupExperiencesByCompany = (experiences) => {
   }));
 };
 
-export default function ExperienceCard() {
+export default function SWECard() {
   const experiences = [
     {
-      title: "Research Assistant",
-      company: "HCMC University of Technology and Education",
+      title: "Incoming Software Engineering Intern",
+      company: "FPT Software",
       badges: ["Deep Learning", "Data Science"],
-      period: "2024 - Present",
+      period: "2025 - Present",
       location: "Hybrid",
       description: [
         "• Helped develop an advanced method to classify malware families using deep learning techniques.",
         "• Collected and processed data for cybersecurity analysis.",
-      ],
-    },
-    {
-      title: "Teaching Assistant",
-      company: "HCMC University of Technology and Education",
-      badges: ["Discrete Math", "Programming Basics"],
-      period: "2023 - 2024",
-      location: "HCMC, Vietnam",
-      description: [
-        "• Graded assignments and exams across multiple courses, ensuring consistent and fair evaluation standards.",
-        "• Managed administrative tasks, maintaining accurate student records and preparing grade reports.",
       ],
     },
   ];

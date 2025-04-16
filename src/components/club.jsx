@@ -156,9 +156,6 @@ export default function BCICard() {
                             <div className="flex flex-col pt-0 md:flex-row md:items-start justify-between">
                               <div>
                                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{experience.title}</h3>
-                                <p className="text-gray-500 dark:text-gray-400">
-                                  {experience.period} · {calculateDurationInMonths(experience.period)}
-                                </p>
 
                                 <motion.div variants={containerVariants} className="mt-2 flex flex-wrap gap-2">
                                   {experience.badges.map((badge, badgeIndex) => (

@@ -8,6 +8,8 @@ import { useTheme } from "../components/ThemeProvider"
 import ExperienceCard from "../components/experience-card"
 import { Github,  Linkedin, Mail, ExternalLink, Code, BookOpen, Award, User, Menu, Briefcase } from "lucide-react"
 import BCICard from "../components/club"
+import SWE from "../components/SWE"
+import USF from "../components/USF"
 
 import Dash from "../assets/Dash.png"
 import Toast from "../assets/Toast.png"
@@ -703,101 +705,13 @@ export default function Home() {
                 <Briefcase className="h-8 w-5 text-blue-800 dark:text-blue-400" />
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Experience</h2>
               </div>
+              
               <ExperienceCard />
-            </motion.div>
+              <SWE></SWE>
+              <BCICard></BCICard>
+              <USF></USF>
 
-            {[
-              {
-                title: "Incoming Software Engineer Intern",
-                company: "FPT Software",
-                badges: ["MERN", "PostgreSQL", "NodeJS"],
-                period: "2025 - Present",
-                location: "HCMC, VN",
-                description: [
-                  "• contributing to enterprise-level software development projects.",
-                ],
-              },
-              {
-                title: "Committee Chair",
-                company: "USF Engineering Expo",
-                badges: ["ReactJS", "TailwindCSS", "NodeJS", "Group Work"],
-                period: "2025 - Present",
-                location: "Tampa, Florida",
-                description: [
-                  "• Collaborated with a team to develop projects that inspire children to develop a passion for engineering.",
-                  "• Designed and built a typing test with personalized feedback to enhance typing skills, featuring an engaging and visually appealing UI to captivate young learners.",
-                ],
-              },
-            ].map((experience, index) => (
-              <motion.div
-                key={index}
-                variants={{
-                  hidden: { opacity: 0, y: 30 },
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                      delay: 0.2 * index,
-                      duration: 0.5,
-                      ease: "easeOut",
-                    },
-                  },
-                }}
-              >
-                <Card>
-                  <CardContent className="p-6">
-                    <div className="flex flex-col pt-4 md:flex-row md:items-center justify-between gap-4">
-                      <div>
-                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{experience.title}</h3>
-                        <p className="text-gray-500 dark:text-gray-400">{experience.company}</p>
-                        <motion.div variants={containerVariants} className="mt-2 flex flex-wrap gap-2">
-                          {experience.badges.map((badge, badgeIndex) => (
-                            <motion.div
-                              key={badgeIndex}
-                              variants={{
-                                hidden: { opacity: 0, scale: 0.8 },
-                                visible: {
-                                  opacity: 1,
-                                  scale: 1,
-                                  transition: { delay: 0.3 + badgeIndex * 0.1, duration: 0.3 },
-                                },
-                              }}
-                            >
-                              <Badge>{badge}</Badge>
-                            </motion.div>
-                          ))}
-                        </motion.div>
-                      </div>
-                      <div className="text-right">
-                        <p className="font-medium text-gray-900 dark:text-white">{experience.period}</p>
-                        <p className="text-gray-500 dark:text-gray-400">{experience.location}</p>
-                      </div>
-                    </div>
-                    <motion.div variants={containerVariants} className="mt-3">
-                      <div className="mt-2 flex flex-wrap gap-2">
-                        {experience.description.map((desc, descIndex) => (
-                          <motion.p
-                            key={descIndex}
-                            variants={{
-                              hidden: { opacity: 0, y: 10 },
-                              visible: {
-                                opacity: 1,
-                                y: 0,
-                                transition: { delay: 0.4 + descIndex * 0.1, duration: 0.3 },
-                              },
-                            }}
-                            className="text-gray-700 dark:text-gray-300"
-                          >
-                            {desc}
-                          </motion.p>
-                        ))}
-                      </div>
-                    </motion.div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-            <BCICard></BCICard>
+            </motion.div>  
           </div>
           
         </motion.section>
