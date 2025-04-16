@@ -17,6 +17,8 @@ import MERN from "../assets/MERN.png"
 import ML from "../assets/ML.png"
 import Pytorch from "../assets/PyTorch.png"
 import Whale from "../assets/whale.png"
+import Cart from "../assets/Cart.jpg"
+import SkinIntel from "../assets/SkinIntel.png"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -742,6 +744,18 @@ export default function Home() {
                 {
                   title: "DashConnect",
                   image: Dash,
+                  badges: ["NodeJS", "ExpressJS", "MongoDB"],
+                  description: "Web platform where users can share blogs, create accounts and more.",
+                },
+                {
+                  title: "GreenCart",
+                  image: Cart,
+                  badges: ["NextJS", "NodeJS", "MongoDB", "Python"],
+                  description: "A web extension and web app to check the eco-friendliness of a product.",
+                },
+                {
+                  title: "SkinIntel",
+                  image: SkinIntel,
                   badges: ["NodeJS", "ExpressJS", "MongoDB"],
                   description: "Web platform where users can share blogs, create accounts and more.",
                 },
