@@ -7,6 +7,7 @@ import { Card, CardContent } from "../components/ui/Card"
 import { useTheme } from "../components/ThemeProvider"
 import ExperienceCard from "../components/experience-card"
 import { Github,  Linkedin, Mail, ExternalLink, Code, BookOpen, Award, User, Menu, Briefcase } from "lucide-react"
+import BCICard from "../components/club"
 
 import Dash from "../assets/Dash.png"
 import Toast from "../assets/Toast.png"
@@ -727,17 +728,6 @@ export default function Home() {
                   "• Designed and built a typing test with personalized feedback to enhance typing skills, featuring an engaging and visually appealing UI to captivate young learners.",
                 ],
               },
-              {
-                title: "Tech Chair",
-                company: "",
-                badges: ["TensorFlow", "Python", "NodeJS", "NumPy"],
-                period: "2025 - Present",
-                location: "Tampa, Florida",
-                description: [
-                  "• Led technical workshops, empowering students to build full-stack applications and AI models.",
-                  "• Established industry partnerships providing members with real-world BCI exposure.",
-                ],
-              },
             ].map((experience, index) => (
               <motion.div
                 key={index}
@@ -807,7 +797,9 @@ export default function Home() {
                 </Card>
               </motion.div>
             ))}
+            <BCICard></BCICard>
           </div>
+          
         </motion.section>
 
         {/* Projects Section - With Animation */}
