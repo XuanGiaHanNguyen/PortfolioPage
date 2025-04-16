@@ -86,6 +86,9 @@ function useScrollAnimation() {
 
 export default function Home() {
 
+  const [status, setStatus] = useState('idle'); 
+  const [errorMessage, setErrorMessage] = useState('');
+
   const { theme, setTheme } = useTheme()
   console.log("Current theme in Home:", theme)
 
@@ -119,7 +122,7 @@ export default function Home() {
 
       if (response.ok) {
         setStatus('success');
-        setFormData({ fullName: '', email: '', message: '' });
+        setFormData({ name: '', email: '', message: '' });
       } else {
         const data = await response.text();
         setStatus('error');
@@ -757,7 +760,7 @@ export default function Home() {
                   title: "SkinIntel",
                   image: SkinIntel,
                   badges: ["NodeJS", "ExpressJS", "MongoDB"],
-                  description: "Web platform where users can share blogs, create accounts and more.",
+                  description: "AI-Powered Skin Cancer Detection Platform that uses the ABCDE method.",
                 },
               ].map((project, index) => (
                 <motion.div
@@ -890,11 +893,15 @@ export default function Home() {
               <motion.div variants={cardVariants} transition={{ delay: 0.2 }}>
                 <Card className="py-4">
                   <CardContent className="p-6">
-                    <motion.form variants={containerVariants} className="space-y-4">
+                  <motion.form 
+                      variants={containerVariants} 
+                      className="space-y-4"
+                      onSubmit={handleSubmit} // Add this line to connect the form to your submit handler
+                    >
                       {[
-                        { id: "name", label: "Name", type: "text", placeholder: "Your name"},
-                        { id: "email", label: "Email", type: "email", placeholder: "Your email"},
-                        { id: "message", label: "Message", type: "textarea", placeholder: "Your message" },
+                        { id: "name", name: "name", label: "Name", type: "text", placeholder: "Your name"},
+                        { id: "email", name: "email", label: "Email", type: "email", placeholder: "Your email"},
+                        { id: "message", name: "message", label: "Message", type: "textarea", placeholder: "Your message" },
                       ].map((field, index) => (
                         <motion.div
                           key={index}
@@ -914,18 +921,20 @@ export default function Home() {
                           {field.type === "textarea" ? (
                             <textarea
                               id={field.id}
+                              name={field.name} // Add this line
                               className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 min-h-[120px]"
                               placeholder={field.placeholder}
-                              value={formData[field.id]}
+                              value={formData[field.name]}
                               onChange={handleChange}
                             />
                           ) : (
                             <input
                               id={field.id}
+                              name={field.name} // Add this line
                               type={field.type}
                               className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400"
                               placeholder={field.placeholder}
-                              value={formData[field.id]}
+                              value={formData[field.name]}
                               onChange={handleChange}
                             />
                           )}
@@ -941,7 +950,17 @@ export default function Home() {
                           },
                         }}
                       >
-                        <Button className="w-full">Send Message</Button>
+                        <Button type="submit" className="w-full">
+                          {status === 'sending' ? 'Sending...' : 'Send Message'}
+                        </Button>
+                        
+                        {status === 'success' && (
+                          <p className="text-blue-500 mt-2 text-sm">Message sent successfully!</p>
+                        )}
+                        
+                        {status === 'error' && (
+                          <p className="text-gray-500 mt-2 text-sm">{errorMessage}</p>
+                        )}
                       </motion.div>
                     </motion.form>
                   </CardContent>
