@@ -712,7 +712,6 @@ export default function Home() {
               </div>
               
               <ExperienceCard />
-              <SWE></SWE>
               <BCICard></BCICard>
               <USF></USF>
 
