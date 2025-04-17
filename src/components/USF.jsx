@@ -124,7 +124,7 @@ export default function USFCard() {
               </div>
 
               {/* Roles at this company */}
-              <div className="ml-6 relative w-full">
+              <div className="ml-6 pr-6 relative w-full">
                 {group.experiences.map((experience, expIndex) => (
                   <div key={expIndex} className="relative">
                     {/* Timeline connector */}
@@ -140,8 +140,9 @@ export default function USFCard() {
 
                       {/* Role content */}
                       <div className="flex-1">
-                        <Card className="shadow-none border-0">
-                          <CardContent className="p-0">
+                        {/* Replaced Card with div */}
+                        <div className="bg-transparent">
+                          <div className="p-0">
                             <div className="flex flex-col pt-0 md:flex-row md:items-start justify-between">
                               <div>
                                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{experience.title}</h3>
@@ -192,8 +193,8 @@ export default function USFCard() {
                                 ))}
                               </div>
                             </motion.div>
-                          </CardContent>
-                        </Card>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
