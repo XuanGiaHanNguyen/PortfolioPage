@@ -695,7 +695,6 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* Experience Section - With Animation */}
         <motion.section
           id="Experience"
           ref={experienceAnimation.ref}
@@ -711,13 +710,21 @@ export default function Home() {
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Experience</h2>
               </div>
               
-              <ExperienceCard />
-              <BCICard></BCICard>
-              <USF></USF>
-
+              <motion.div variants={cardVariants} className="space-y-4">
+                <motion.div variants={itemVariants}>
+                  <ExperienceCard />
+                </motion.div>
+                
+                <motion.div variants={itemVariants}>
+                  <BCICard />
+                </motion.div>
+                
+                <motion.div variants={itemVariants}>
+                  <USF />
+                </motion.div>
+              </motion.div>
             </motion.div>  
           </div>
-          
         </motion.section>
 
         {/* Projects Section - With Animation */}
