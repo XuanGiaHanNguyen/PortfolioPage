@@ -200,8 +200,8 @@ export default function Home() {
               Contact
             </a>
           </nav>
-          <div className="flex items-center gap-2">
-            <ModeToggle />
+          <div>
+            
           </div>
         </div>
       </header>
