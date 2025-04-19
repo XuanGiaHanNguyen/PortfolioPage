@@ -8,8 +8,9 @@ import { useTheme } from "../components/ThemeProvider"
 import ExperienceCard from "../components/experience-card"
 import { Github,  Linkedin, Mail, ExternalLink, Code, BookOpen, Award, User, Menu, Briefcase } from "lucide-react"
 import BCICard from "../components/club"
-import SWE from "../components/SWE"
 import USF from "../components/USF"
+
+import { WindowIcon } from "../assets/icon"
 
 import Dash from "../assets/Dash.png"
 import Toast from "../assets/Toast.png"
@@ -200,8 +201,8 @@ export default function Home() {
               Contact
             </a>
           </nav>
-          <div>
-            
+          <div className="border-1 p-1 border-gray-500  rounded-md">
+            {WindowIcon}
           </div>
         </div>
       </header>
