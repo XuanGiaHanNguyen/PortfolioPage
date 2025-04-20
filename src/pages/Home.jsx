@@ -201,7 +201,7 @@ export default function Home() {
               Contact
             </a>
           </nav>
-          <div className="border-1 p-1 border-gray-500  rounded-md">
+          <div className="border-1 p-2 border-gray-500  rounded-md">
             {WindowIcon}
           </div>
         </div>
