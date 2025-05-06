@@ -752,18 +752,6 @@ export default function Home() {
                     "Web platform to connect K-12 students with qualified tutors based on skill level, time availability.",
                 },
                 {
-                  title: "DashConnect",
-                  image: Dash,
-                  badges: ["NodeJS", "ExpressJS", "MongoDB"],
-                  description: "Web platform where users can share blogs, create accounts and more.",
-                },
-                {
-                  title: "GreenCart",
-                  image: Cart,
-                  badges: ["NextJS", "NodeJS", "MongoDB", "Python"],
-                  description: "A web extension and web app to check the eco-friendliness of a product.",
-                },
-                {
                   title: "SkinIntel",
                   image: SkinIntel,
                   badges: ["NodeJS", "ExpressJS", "MongoDB"],
