@@ -195,8 +195,25 @@ export default function Home() {
               Contact
             </a>
           </nav>
-          <div className="border-1 p-2 border-gray-500 rounded-md">
-            {WindowIcon}
+          <div className="flex flex-row gap-2">
+             <a href="https://github.com/XuanGiaHanNguyen" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="icon" className="rounded-full">
+                <Github className="h-4 w-4" />
+                <span className="sr-only">GitHub</span>
+              </Button>
+            </a>
+            <a href="https://www.linkedin.com/in/xuangiahannguyen/" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="icon" className="rounded-full">
+                <Linkedin className="h-4 w-4" />
+                <span className="sr-only">LinkedIn</span>
+              </Button>
+            </a>
+            <a href="mailto:xuangiahannguyen@gmail.com" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="icon" className="rounded-full">
+                <Mail className="h-4 w-4" />
+                <span className="sr-only">Email</span>
+              </Button>
+            </a>
           </div>
         </div>
       </header>
