@@ -130,7 +130,7 @@ export default function ExperienceCard() {
               <div className="flex items-start gap-4 mb-4">
                 
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{group.company}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 ">{group.company}</h3>
                 </div>
               </div>
 
@@ -140,13 +140,13 @@ export default function ExperienceCard() {
                   <div key={expIndex} className="relative">
                     {/* Timeline connector */}
                     {expIndex < group.experiences.length - 1 && (
-                      <div className="absolute left-[6px] top-[24px] w-[2px] h-[calc(100%)] bg-gray-200 dark:bg-gray-700"></div>
+                      <div className="absolute left-[6px] top-[24px] w-[2px] h-[calc(100%)] bg-gray-200 "></div>
                     )}
 
                     <div className="flex mb-6">
                       {/* Timeline dot */}
                       <div className="relative">
-                        <div className="w-[14px] h-[14px] rounded-full bg-gray-400 dark:bg-gray-500 mt-2 mr-4"></div>
+                        <div className="w-[14px] h-[14px] rounded-full bg-gray-400 mt-2 mr-4"></div>
                       </div>
 
                       {/* Role content */}
@@ -156,7 +156,7 @@ export default function ExperienceCard() {
                           <div className="p-0">
                             <div className="flex flex-col pt-0 md:flex-row md:items-start justify-between">
                               <div>
-                                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{experience.title}</h3>
+                                <h3 className="text-lg font-semibold text-gray-900">{experience.title}</h3>
 
                                 <motion.div variants={containerVariants} className="mt-2 flex flex-wrap gap-2">
                                   {experience.badges.map((badge, badgeIndex) => (
@@ -179,8 +179,8 @@ export default function ExperienceCard() {
                               
                               {/* Location on the right side */}
                               <div className="hidden md:block text-right min-w-[100px]">
-                                <p className="font-medium text-gray-900 dark:text-white">{experience.period}</p>
-                                <p className="text-gray-500 dark:text-gray-400">{experience.location}</p>
+                                <p className="font-medium text-gray-900">{experience.period}</p>
+                                <p className="text-gray-500">{experience.location}</p>
                               </div>
                             </div>
                             
@@ -197,7 +197,7 @@ export default function ExperienceCard() {
                                         transition: { delay: 0.4 + descIndex * 0.1, duration: 0.3 },
                                       },
                                     }}
-                                    className="text-gray-700 dark:text-gray-300"
+                                    className="text-gray-700"
                                   >
                                     {desc}
                                   </motion.p>
