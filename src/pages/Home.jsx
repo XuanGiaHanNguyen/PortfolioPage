@@ -8,9 +8,8 @@ import { Github, Linkedin, Mail, ExternalLink, Code, BookOpen, Award, User, Menu
 import BCICard from "../components/club"
 import USF from "../components/USF"
 
-import { WindowIcon } from "../assets/icon"
-
-import Dash from "../assets/Dash.png"
+import MediCare from "../assets/Medicare.png"
+import Algorythm from "../assets/Algorythm.png"
 import Toast from "../assets/Toast.png"
 import MERN from "../assets/MERN.png"
 import ML from "../assets/ML.png"
@@ -345,7 +344,7 @@ export default function Home() {
               <motion.div variants={itemVariants} className="space-y-4">
                 <p className="text-lg text-gray-700">
                   Hello everyone, "Whalecome" to my little corner of the internet! I am currently a student at
-                  University of South Florida and incoming SWE intern at FPT Software.
+                  University of South Florida.
                 </p>
                 <p className="text-lg text-gray-700">
                   Please feel free to explore around and I would be more than happy to connect with everyone.
@@ -758,7 +757,7 @@ export default function Home() {
                 {
                   title: "ToastTutor",
                   image: Toast,
-                  badges: ["React", "Stripe", "Redis", "Django", "SupaBase"],
+                  badges: ["ReactJS", "Stripe", "Redis", "Django", "SupaBase"],
                   description:
                     "Web platform to connect K-12 students with qualified tutors based on skill level, time availability.",
                 },
@@ -768,6 +767,20 @@ export default function Home() {
                   badges: ["NodeJS", "ExpressJS", "MongoDB"],
                   description: "AI-Powered Skin Cancer Detection Platform that uses the ABCDE method.",
                 },
+                {
+                  title: "MediCare+",
+                  image: MediCare,
+                  badges: ["NodeJS", "ExpressJS", "MongoDB", "JWT", "ReactJS"],
+                  description: "Full-stack healthcare management web application enabling users to book appointments and manage medical records.",
+                },
+                {
+                  title: "Algorythm",
+                  image: Algorythm,
+                  badges: ["VueJS", "Flask", "JavaScript"],
+                  description:
+                    "Interactive sorting algorithm visualizer allowing users to explore and compare algorithms like Insertion Sort, and Quick Sort.",
+                },
+                
             ].map((project, index) => (
                 <motion.div
                   key={index}
